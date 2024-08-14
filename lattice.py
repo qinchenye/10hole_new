@@ -1,6 +1,6 @@
 '''
-Cu site (only one) and O square lattice surrounding it. 
-Keep using CuO2 type lattice but now there is only (0,0) Cu-site
+Ni site (only one) and O square lattice surrounding it. 
+Keep using NiO2 type lattice but now there is only (0,0) Ni-site
 '''
 import parameters as pam
 
@@ -67,15 +67,14 @@ def get_unit_cell_rep(x,y,z):
             'Ox1', 'Ox2', 'Oy1', 'Oy2', 'NotOnSublattice'
     '''
     # Note that x, y, z can be negative
-    if x==0 and y==0 and z==0:
-        return pam.Ni_Cu_orbs
-    elif x==0 and y==0 and z==2:                                           #z=1 is Ni,z=0 is Cu
-        return pam.Ni_Cu_orbs
-    elif x==0 and y==0 and z==1:                                           #z=1 is Ni,z=0 is Cu
-        return pam.Obilayer_orbs   
-    elif abs(x) % 2 == 1 and abs(y) % 2 == 0 and (z==0 or z==2):
+    if (x,y,z)==(0,0,0) or (x,y,z)==(2,0,0) or (x,y,z)==(0,0,2) or (x,y,z)==(2,0,2): 
+        return pam.Ni_orbs
+    elif (x,y,z)==(0,0,1) or (x,y,z)==(2,0,1):
+        return pam.Obilayer_orbs
+    elif (x,y,z)==(-1,0,0) or (x,y,z)==(1,0,0) or (x,y,z)==(3,0,0) or (x,y,z)==(-1,0,2) or (x,y,z)==(1,0,2) or (x,y,z)==(3,0,2): 
         return pam.O1_orbs
-    elif abs(x) % 2 == 0 and abs(y) % 2 == 1 and (z==0 or z==2):
+    elif (x,y,z)==(0,1,0) or (x,y,z)==(0,-1,0) or (x,y,z)==(2,1,0) or (x,y,z)==(2,-1,0) or (x,y,z)==(0,1,2) or (x,y,z)==(0,-1,2) or (x,y,z)==(2,1,2) or (x,y,z)==(2,-1,2): 
         return pam.O2_orbs
+     
     else:
         return ['NotOnSublattice']
