@@ -18,20 +18,20 @@ ed = {'d3z2r2': 0,\
         'dyz'   : 0.909}
 
 # 29.5GPa:
-ed = {'d3z2r2': 0.095,\
+ed = {'d3z2r2': 0.046,\
         'dx2y2' : 0,\
-        'dxy'   : 1.06,\
-        'dxz'   : 0.94,\
-        'dyz'   : 0.94}
+        'dxy'   : 0.823,\
+        'dxz'   : 0.706,\
+        'dyz'   : 0.706}
 
 eps = np.arange(1.86, 1.861, 1.0)
 
 # 29.5GPa:
-eps = np.arange(3.23, 3.231, 1.0)
+eps = np.arange(2.47, 2.471, 1.0)
 
 
 # 29.5GPa:
-epbilayer = 2.42
+epbilayer = 2.94
 
 As = np.arange(6.0, 6.01, 2.0)
 B = 0.15
@@ -54,14 +54,14 @@ if Norb==8 or Norb==5:
 #     tpds = [0.01]
 
     # 29.5GPa:
-    tpds = np.linspace(1.58, 1.58, num=1, endpoint=True) #[0.25]
+    tpds = np.linspace(1.38, 1.38, num=1, endpoint=True) #[0.25]
 
     tpps = [0.55]
 
     # 29.5GPa:
-    tpps = [0.35]
+    tpps = [0.537]
     
-    tapzds = np.linspace(1.66, 1.66, num=1, endpoint=True)
+    tapzds = np.linspace(1.48, 1.48, num=1, endpoint=True)
 
     tz_a1a1 = 0.028
 

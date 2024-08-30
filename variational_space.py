@@ -868,7 +868,7 @@ class VariationalSpace:
                             for f1 in funlist[0]:
                                 orb9, orb10 = f1()
                                 
-                                #Ensure that both holes are on O or one is on O and the other is on Ni to form d7
+                                #Ensure that vs is the state which we want.According to the arrangement rule, there are only two situations for the 9th hole: on Ni and on O, while the 10th hole can only be on O
                                 if orb9 not in pam.O_orbs and orb9 !='dx2y2':
                                     continue
                                 if orb9 =='dx2y2':

@@ -45,7 +45,7 @@ def get_ground_state(matrix, VS, S_Ni_val, Sz_Ni_val, S_Cu_val, Sz_Cu_val, S_Ni_
     
     # in case eigsh works:
     Neval = pam.Neval
-    vals, vecs = sps.linalg.eigsh(matrix, k=Neval, which='SA')
+    vals, vecs = sps.linalg.eigsh(matrix, k=30, which='SA')
     vals.sort()
     print ('lowest eigenvalue of H from np.linalg.eigsh = ')
     print (vals)
@@ -63,7 +63,9 @@ def get_ground_state(matrix, VS, S_Ni_val, Sz_Ni_val, S_Cu_val, Sz_Cu_val, S_Ni_
     
     wgt_LmLn = np.zeros(10)
     wgt_d8d8L_d8d8L = np.zeros(20)
-       
+    wgt_d8d8_d8Ld8L = np.zeros(20)
+    wgt_d8d8_d7d8L = np.zeros(20)    
+    
     sumweight=0
     sumweight1=0
     synweight2=0
@@ -174,12 +176,14 @@ def get_ground_state(matrix, VS, S_Ni_val, Sz_Ni_val, S_Cu_val, Sz_Cu_val, S_Ni_
                ", weight = ", weight,'\n')          
 
 
-            if (orb9 in pam.O_orbs) and (orb10 in pam.O_orbs): 
+            if (orb9 in pam.O_orbs) and (orb10 in pam.O_orbs) and (((x9==-1 or x9==0 or x9==1) and (x10==2 or x10==3)) or ((x10==-1 or x10==0 or x10==1) and (x9==2 or x9==3))): 
                 wgt_d8d8L_d8d8L[0]+=abs(vecs[istate,k])**2 
   
-
+            if (orb9 in pam.O_orbs) and (orb10 in pam.O_orbs) and (((x9==-1 or x9==0 or x9==1) and (x10==-1 or x10==0 or x10==1)) or ((x10==2 or x10==3) and (x9==2 or x9==3))): 
+                wgt_d8d8_d8Ld8L[0]+=abs(vecs[istate,k])**2 
                         
-                    
+            if (orb9 in pam.Ni_orbs) and (orb10 in pam.O_orbs): 
+                wgt_d8d8_d7d8L[0]+=abs(vecs[istate,k])**2                     
 
 
 
@@ -188,8 +192,8 @@ def get_ground_state(matrix, VS, S_Ni_val, Sz_Ni_val, S_Cu_val, Sz_Cu_val, S_Ni_
 
     print ('sumweight=',sumweight/number)
     print ('wgt_d8d8L_d8d8L=',wgt_d8d8L_d8d8L[0]/number)
-           
-
+    print ('wgt_d8d8_d8Ld8L=',wgt_d8d8_d8Ld8L[0]/number)           
+    print ('wgt_d8d8_d7d8L=',wgt_d8d8_d7d8L[0]/number)
 
 
 

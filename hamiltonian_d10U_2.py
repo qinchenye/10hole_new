@@ -548,13 +548,12 @@ def create_tpd_nn_matrix(VS, tpd_nn_hop_dir, tpd_orbs, tpd_nn_hop_fac):
                         continue
                     if slabel[46] not in pam.O_orbs:
                         continue
-                    if slabel[41] =='dx2y2':
-                        if slabel[44]==slabel[49] or ((slabel[42]==0 and (slabel[47]==2 or slabel[47]==3)) or (slabel[42]==2 and (slabel[47]==-1 or slabel[47]==0 or slabel[47]==1))):
-                            continue
+                    if slabel[41] =='dx2y2' and (slabel[44]==slabel[49] or ((slabel[42]==0 and (slabel[47]==2 or slabel[47]==3)) or (slabel[42]==2 and (slabel[47]==-1 or slabel[47]==0 or slabel[47]==1)))):
+                        continue
 
-                    if slabel[41] in pam.O_orbs:                                        
-                        if (slabel[44]==slabel[49] and (slabel[42]==-1 or slabel[42]==0 or slabel[42]==1) and (slabel[47]==-1 or slabel[47]==0 or slabel[47]==1)) or (slabel[44]==slabel[49] and (slabel[42]==2 or slabel[42]==3) and (slabel[47]==2 or slabel[47]==3)):
-                            continue
+                    if slabel[41] in pam.O_orbs and ((slabel[44]==slabel[49] and (slabel[42]==-1 or slabel[42]==0 or slabel[42]==1) and (slabel[47]==-1 or slabel[47]==0 or slabel[47]==1)) or (slabel[44]==slabel[49] and (slabel[42]==2 or slabel[42]==3) and (slabel[47]==2 or slabel[47]==3))):                                        
+                   
+                        continue
 
 
                         
@@ -595,13 +594,13 @@ def create_tpd_nn_matrix(VS, tpd_nn_hop_dir, tpd_orbs, tpd_nn_hop_fac):
                         continue
                     if slabel[46] not in pam.O_orbs:
                         continue
-                    if slabel[41] =='dx2y2':
-                        if slabel[44]==slabel[49] or ((slabel[42]==0 and (slabel[47]==2 or slabel[47]==3)) or (slabel[42]==2 and (slabel[47]==-1 or slabel[47]==0 or slabel[47]==1))):
-                            continue
+                    if slabel[41] =='dx2y2' and (slabel[44]==slabel[49] or ((slabel[42]==0 and (slabel[47]==2 or slabel[47]==3)) or (slabel[42]==2 and (slabel[47]==-1 or slabel[47]==0 or slabel[47]==1)))):
+                        continue
 
-                    if slabel[41] in pam.O_orbs:                                        
-                        if (slabel[44]==slabel[49] and (slabel[42]==-1 or slabel[42]==0 or slabel[42]==1) and (slabel[47]==-1 or slabel[47]==0 or slabel[47]==1)) or (slabel[44]==slabel[49] and (slabel[42]==2 or slabel[42]==3) and (slabel[47]==2 or slabel[47]==3)):
-                            continue
+                    if slabel[41] in pam.O_orbs and ((slabel[44]==slabel[49] and (slabel[42]==-1 or slabel[42]==0 or slabel[42]==1) and (slabel[47]==-1 or slabel[47]==0 or slabel[47]==1)) or (slabel[44]==slabel[49] and (slabel[42]==2 or slabel[42]==3) and (slabel[47]==2 or slabel[47]==3))):                                        
+                   
+                        continue
+
 
                         
                 
@@ -693,13 +692,11 @@ def create_tpp_nn_matrix(VS,tpp_nn_hop_fac):
                         continue
                     if slabel[46] not in pam.O_orbs:
                         continue
-                    if slabel[41] =='dx2y2':
-                        if slabel[44]==slabel[49] or ((slabel[42]==0 and (slabel[47]==2 or slabel[47]==3)) or (slabel[42]==2 and (slabel[47]==-1 or slabel[47]==0 or slabel[47]==1))):
-                            continue
+                    if slabel[41] =='dx2y2' and (slabel[44]==slabel[49] or ((slabel[42]==0 and (slabel[47]==2 or slabel[47]==3)) or (slabel[42]==2 and (slabel[47]==-1 or slabel[47]==0 or slabel[47]==1)))):
+                        continue
 
-                    if slabel[41] in pam.O_orbs:                                        
-                        if (slabel[44]==slabel[49] and (slabel[42]==-1 or slabel[42]==0 or slabel[42]==1) and (slabel[47]==-1 or slabel[47]==0 or slabel[47]==1)) or (slabel[44]==slabel[49] and (slabel[42]==2 or slabel[42]==3) and (slabel[47]==2 or slabel[47]==3)):
-                            continue                          
+                    if slabel[41] in pam.O_orbs and ((slabel[44]==slabel[49] and (slabel[42]==-1 or slabel[42]==0 or slabel[42]==1) and (slabel[47]==-1 or slabel[47]==0 or slabel[47]==1)) or (slabel[44]==slabel[49] and (slabel[42]==2 or slabel[42]==3) and (slabel[47]==2 or slabel[47]==3))):                                        
+                        continue                          
                         
                         
                         
@@ -746,13 +743,11 @@ def create_tpp_nn_matrix(VS,tpp_nn_hop_fac):
                         continue
                     if slabel[46] not in pam.O_orbs:
                         continue
-                    if slabel[41] =='dx2y2':
-                        if slabel[44]==slabel[49] or ((slabel[42]==0 and (slabel[47]==2 or slabel[47]==3)) or (slabel[42]==2 and (slabel[47]==-1 or slabel[47]==0 or slabel[47]==1))):
-                            continue
+                    if slabel[41] =='dx2y2' and (slabel[44]==slabel[49] or ((slabel[42]==0 and (slabel[47]==2 or slabel[47]==3)) or (slabel[42]==2 and (slabel[47]==-1 or slabel[47]==0 or slabel[47]==1)))):
+                        continue
 
-                    if slabel[41] in pam.O_orbs:                                        
-                        if (slabel[44]==slabel[49] and (slabel[42]==-1 or slabel[42]==0 or slabel[42]==1) and (slabel[47]==-1 or slabel[47]==0 or slabel[47]==1)) or (slabel[44]==slabel[49] and (slabel[42]==2 or slabel[42]==3) and (slabel[47]==2 or slabel[47]==3)):
-                            continue                      
+                    if slabel[41] in pam.O_orbs and ((slabel[44]==slabel[49] and (slabel[42]==-1 or slabel[42]==0 or slabel[42]==1) and (slabel[47]==-1 or slabel[47]==0 or slabel[47]==1)) or (slabel[44]==slabel[49] and (slabel[42]==2 or slabel[42]==3) and (slabel[47]==2 or slabel[47]==3))):                                        
+                        continue                            
 
                     slabel2=s9,orb9,x9,y9,z9,s10,o10,x10+vx,y10+vy,z10+vz
                     new_state,ph = vs.reorder_state(slabel2)
@@ -1299,16 +1294,16 @@ def get_double_occu_list(VS):
             util.get_double_append(i,59,s5,o5,x5,y5,z5,s9,o9,x9,y9,z9,s1,o1,x1,y1,z1,s2,o2,x2,y2,z2,s3,o3,x3,y3,z3,s4,o4,x4,y4,z4,\
                   s6,o6,x6,y6,z6,s7,o7,x7,y7,z7,s8,o8,x8,y8,z8,s10,o10,x10,y10,z10,\
                                d_000_list,p_list,idx_000,hole345_000_part, double_000_part)                
-            util.get_double_append(i,69,s6,o6,x6,y6,z6,s9,o9,x9,y9,z9,s1,o1,x1,y1,z1,s2,o2,x2,y2,z2,s3,o3,x3,y3,z3,s4,o4,x4,y4,z4,s5,o5,x5,y5,z5,\
-                  s7,o7,x7,y7,z7,s8,o8,x8,y8,z8,s10,o10,x10,y10,z10,\
+            util.get_double_append(i,69,s6,o6,x6,y6,z6,s9,o9,x9,y9,z9,s1,o1,x1,y1,z1,s2,o2,x2,y2,z2,\
+                               s3,o3,x3,y3,z3,s4,o4,x4,y4,z4,s5,o5,x5,y5,z5,s7,o7,x7,y7,z7,s8,o8,x8,y8,z8,s10,o10,x10,y10,z10,\
                                d_000_list,p_list,idx_000,hole345_000_part, double_000_part) 
                 
         if (x7, y7, z7)==(x9, y9, z9):
-            util.get_double_append(i,79,s7,o7,x7,y7,z7,s9,o9,x9,y9,z9,s1,o1,x1,y1,z1,s2,o2,x2,y2,z2,s3,o3,x3,y3,z3,s4,o4,x4,y4,z4,s5,o5,x5,y5,z5,\
-                  s6,o6,x6,y6,z6,s8,o8,x8,y8,z8,s10,o10,x10,y10,z10,\
+            util.get_double_append(i,79,s7,o7,x7,y7,z7,s9,o9,x9,y9,z9,s1,o1,x1,y1,z1,s2,o2,x2,y2,z2,\
+                               s3,o3,x3,y3,z3,s4,o4,x4,y4,z4,s5,o5,x5,y5,z5,s6,o6,x6,y6,z6,s8,o8,x8,y8,z8,s10,o10,x10,y10,z10,\
                                d_200_list,p_list,idx_200,hole345_200_part, double_200_part)                
-            util.get_double_append(i,89,s8,o8,x8,y8,z8,s9,o9,x9,y9,z9,s1,o1,x1,y1,z1,s2,o2,x2,y2,z2,s3,o3,x3,y3,s4,o4,x4,y4,z4,z3,s5,o5,x5,y5,z5,\
-                  s6,o6,x6,y6,z6,s7,o7,x7,y7,z7,s10,o10,x10,y10,z10,\
+            util.get_double_append(i,89,s8,o8,x8,y8,z8,s9,o9,x9,y9,z9,s1,o1,x1,y1,z1,s2,o2,x2,y2,z2,\
+                               s3,o3,x3,y3,s4,o4,x4,y4,z4,z3,s5,o5,x5,y5,z5,s6,o6,x6,y6,z6,s7,o7,x7,y7,z7,s10,o10,x10,y10,z10,\
                                d_200_list,p_list,idx_200,hole345_200_part, double_200_part)                 
                                 
            
